@@ -1,11 +1,11 @@
 return {
 
   -- lsp, dap, cmp
-  require("lsp_dap.lsp-config"),
-  require("lsp_dap.null-ls"),
-  require("lsp_dap.cmp"),
-  require("lsp_dap.treesitter"),
-  require("lsp_dap.nvim-dap"),
+  require("plugins.lsp_dap.lsp-config"),
+  require("plugins.lsp_dap.null-ls"),
+  require("plugins.lsp_dap.cmp"),
+  require("plugins.lsp_dap.treesitter"),
+  require("plugins.lsp_dap.nvim-dap"),
 
   -- productivity
   require("plugins.productivity.coderunner"),
@@ -29,8 +29,8 @@ return {
   require("plugins.cp.leetcode"),
 
   -- git
-require("git.git_signs"),
-require("git.lazygit"),
+require("plugins.git.git_signs"),
+require("plugins.git.lazygit"),
 
   -- ai
   require("plugins.ai.codeium"),
@@ -52,6 +52,6 @@ require("git.lazygit"),
   require("plugins.looks.scrollbar"),
 
   -- fun
-require("fun.cellular"),
-require("fun.vim-be-good"),
+require("plugins.fun.cellular"),
+require("plugins.fun.vim-be-good"),
 }
