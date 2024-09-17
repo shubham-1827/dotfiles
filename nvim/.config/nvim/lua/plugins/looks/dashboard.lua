@@ -47,8 +47,8 @@ return {
         footer = {
           "     ",
           "     ",
-          "Kya bolta Bhai, Aaj Kya Kholooooon ...",
-          "Configs yaa Kuch Padhai Likhayi ka bhi Irada hai ?",
+          "Talk is cheap, Show me the CODE",
+          "By Linus Torwalds, yo you 'know' who he is...",
         }
 			},
 		})
