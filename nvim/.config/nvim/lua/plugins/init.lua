@@ -14,6 +14,7 @@ return {
   require("plugins.productivity.toggleterm"),
   require("plugins.productivity.trouble"),
   require("plugins.productivity.vim-tmux"),
+  require("plugins.productivity.render-markdown"),
 
   -- motions
   require("plugins.motions.flash"),

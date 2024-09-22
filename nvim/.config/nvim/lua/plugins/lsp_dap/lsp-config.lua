@@ -11,13 +11,13 @@ return {
 		after = "mason.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls" },
+				ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls", "marksman", "texlab" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		after = "mason.nvim",
-    -- event = "BufEnter",
+		-- event = "BufEnter",
 	},
 }

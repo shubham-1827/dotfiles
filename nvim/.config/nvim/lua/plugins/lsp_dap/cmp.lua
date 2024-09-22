@@ -21,6 +21,7 @@ return {
     require("luasnip")
     snip_loader.lazy_load()
     require("snippets.cpp_snippets")
+    require("snippets.latex_snippets")
 
     -- for icon of codeium
     lspkind.init({
