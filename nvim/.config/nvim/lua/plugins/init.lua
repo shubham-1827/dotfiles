@@ -40,6 +40,8 @@ require("plugins.git.lazygit"),
   require("plugins.file_navigation.neo-tree"),
   require("plugins.file_navigation.oil"),
   require("plugins.file_navigation.telescope"),
+  require("plugins.file_navigation.zoxide"),
+
 
   -- looks
   require("plugins.looks.barbar"),

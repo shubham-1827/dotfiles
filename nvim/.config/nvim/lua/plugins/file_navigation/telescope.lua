@@ -32,7 +32,9 @@ return {
 			pickers = {
 				-- Default configuration for builtin pickers
 			},
-			extensions = {},
+			extensions = {
+
+      },
 		})
 		--extension loading section
 
