@@ -124,6 +124,7 @@ alias py='python3 -q'
 alias pyv='python3 -V'
 alias rd='rm -v -r -f'
 alias rm='rm -v'
+alias eixt='exit'
 
 #cd aliases
 alias cda='cd ..'
