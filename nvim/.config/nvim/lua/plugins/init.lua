@@ -34,7 +34,7 @@ require("plugins.git.git_signs"),
 require("plugins.git.lazygit"),
 
   -- ai
-  require("plugins.ai.codeium"),
+  -- require("plugins.ai.codeium"),
 
   -- file-navigation
   require("plugins.file_navigation.neo-tree"),
