@@ -18,7 +18,7 @@ return {
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "format current buffer" })
 
 		-- Auto-format on save
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*",
 			callback = function()
 				-- Trigger format via null-ls

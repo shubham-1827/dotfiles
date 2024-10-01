@@ -25,27 +25,23 @@ vim.cmd([[
   autocmd FileType * setlocal formatoptions-=cro
 ]])
 
-vim.cmd([[
-  " Automatically remove trailing whitespace on save
-  augroup trim_whitespace
-    autocmd!
-    autocmd BufWritePre * %s/\s\+$//e
-  augroup END
-
-  " Highlight yanked text
-  augroup yank_highlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank({ timeout = 200 })
-  augroup END
-
-]])
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function()
+		if vim.bo.filetype ~= "markdown" then
+			local save_cursor = vim.fn.getpos(".") -- Save cursor position
+			vim.cmd([[%s/\s\+$//e]]) -- Remove trailing whitespace
+			vim.fn.setpos(".", save_cursor) -- Restore cursor position
+		end
+	end,
+})
 
 -- to remove cursorcoloum and cursorline from inactive window
 vim.api.nvim_create_autocmd("WinEnter", {
-    pattern = "*",
-    command = "setlocal cursorline cursorcolumn",
+	pattern = "*",
+	command = "setlocal cursorline cursorcolumn",
 })
 vim.api.nvim_create_autocmd("WinLeave", {
-    pattern = "*",
-    command = "setlocal nocursorline nocursorcolumn",
+	pattern = "*",
+	command = "setlocal nocursorline nocursorcolumn",
 })
