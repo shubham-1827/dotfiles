@@ -18,7 +18,8 @@ vim.cmd("set undolevels=1000")
 vim.cmd("set background=dark")
 vim.cmd("set mouse=a")
 vim.cmd("set history=1000")
-vim.o.completeopt = "noinsert,noselect"
+vim.wo.fillchars='eob: ' -- to remove the tilde (~) at the end of the buffer
+vim.o.completeopt = "noinsert,noselect" -- to disable the default auto complete of nvim, if you are using cmp
 
 -- Disable automatic comments when entering new lines
 vim.cmd([[
