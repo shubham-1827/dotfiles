@@ -11,6 +11,7 @@ fi
 # neofetch
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/gruvbox.omp.json)"
+export PATH=$PATH:/home/victor/.nvm/versions/node/v22.7.0/bin # for npm packages
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/snap/bin"
 source /etc/zsh_command_not_found
