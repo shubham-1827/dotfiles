@@ -62,7 +62,7 @@ map("n", "<leader>fi", "<Cmd>lua vim.lsp.buf.format()<CR>", { desc = "Format doc
 map("n", "<leader>e", "<Cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostic" })
 map("n", "[d", "<Cmd>lua vim.diagnostic.goto_prev()<CR>", { desc = "Go to previous diagnostic" })
 map("n", "]d", "<Cmd>lua vim.diagnostic.goto_next()<CR>", { desc = "Go to next diagnostic" })
-map("n", "<leader>k", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Show hover documentation" })
+-- map("n", "<leader>k", "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Show hover documentation" })
 
 -- Additional LSP
 map("n", "<leader>sh", "<Cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Show signature help" })
@@ -233,3 +233,14 @@ map("n", "<leader>O", "O<ESC>", { desc = "add new line above cursor" })
 vim.api.nvim_create_user_command("Wq", "wq", {})
 vim.api.nvim_create_user_command("W", "w", {})
 vim.api.nvim_create_user_command("Wqall", "wqall", {})
+
+-- Remap Ctrl-h, Ctrl-j, Ctrl-k, Ctrl-l for navigation in insert mode with descriptions
+map('i', '<C-h>', '<Left>', { desc = "Move left in insert mode" })
+map('i', '<C-j>', '<Down>', { desc = "Move down in insert mode" })
+map('i', '<C-k>', '<Up>', { desc = "Move up in insert mode" })
+map('i', '<C-l>', '<Right>', { desc = "Move right in insert mode" })
+
+-- vs code like alt + j, k to move line up and down
+map('n', '<leader>j', ':m .+1<CR>==', { desc = "Move text down" })
+map('n', '<leader>k', ':m .-2<CR>==', { desc = "Move text up" })
+
