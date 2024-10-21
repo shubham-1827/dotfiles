@@ -23,7 +23,8 @@ return {
 	require("plugins.motions.hardtime"),
 	require("plugins.motions.auto-pairs"),
 	require("plugins.motions.which-key"),
-	require("plugins.motions.mini-ai"),
+	require("plugins.motions.nvim-surround"),
+	require("plugins.motions.text-objects"),
 
 	-- themes
 	require("plugins.themes.gruvbox"),
@@ -38,12 +39,14 @@ return {
 
 	-- ai
 	-- require("plugins.ai.codeium"),
+	require("plugins.ai.gemini"),
 
 	-- file-navigation
 	require("plugins.file_navigation.neo-tree"),
 	require("plugins.file_navigation.oil"),
 	require("plugins.file_navigation.telescope"),
 	require("plugins.file_navigation.zoxide"),
+	require("plugins.file_navigation.persistence"),
 
 	-- looks
 	require("plugins.looks.barbar"),
