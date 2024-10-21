@@ -19,6 +19,8 @@ source /etc/zsh_command_not_found
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init --cmd cd zsh)"
 
+# for gemini api
+export GEMINI_API_KEY="AIzaSyCHBOVA9sw2j6T0ggh0tiSAGw2hii4fTHE"
 
 
 ### Added by Zinit's installer
