@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set expandtab")
@@ -18,7 +19,7 @@ vim.cmd("set undolevels=1000")
 vim.cmd("set background=dark")
 vim.cmd("set mouse=a")
 vim.cmd("set history=1000")
-vim.wo.fillchars='eob: ' -- to remove the tilde (~) at the end of the buffer
+vim.wo.fillchars = "eob: " -- to remove the tilde (~) at the end of the buffer
 vim.o.completeopt = "noinsert,noselect" -- to disable the default auto complete of nvim, if you are using cmp
 
 -- Disable automatic comments when entering new lines
@@ -26,6 +27,16 @@ vim.cmd([[
   autocmd FileType * setlocal formatoptions-=cro
 ]])
 
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+	end,
+})
+
+-- autocommand to remove the whitespaces in the whole document
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function()
