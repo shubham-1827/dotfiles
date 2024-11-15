@@ -194,7 +194,7 @@ map(
 map("n", "<leader>hS", "<cmd>Gitsigns stage_buffer<CR>", { desc = "Stage the entire buffer." })
 map("n", "<leader>hu", "<cmd>Gitsigns undo_stage_hunk<CR>", { desc = "Undo the staging of the current hunk." })
 map("n", "<leader>hR", "<cmd>Gitsigns reset_buffer<CR>", { desc = "Reset the entire buffer." })
-map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview the current hunk." })
+map("n", "<leader>hv", "<cmd>Gitsigns preview_hunk<CR>", { desc = "Preview the current hunk." })
 map(
 	"n",
 	"<leader>hb",
@@ -233,6 +233,34 @@ map(
 -- quickfix list and location list with git signs and trouble
 map("n", "<leader>hq", "<cmd>Gitsigns setqflist all<CR>", { desc = "Open git changes quickfix list" })
 map("n", "<leader>hl", "<cmd>Gitsigns setloclist<CR>", { desc = "Open git changes location list" })
+
+-- harpoon keymaps
+local harpoon = require("harpoon")
+
+map("n", "<leader>ha", function()
+	harpoon:list():add()
+end, { desc = "Harpoon: Add current file" })
+
+map("n", "<leader>h1", function()
+	harpoon:list():select(1)
+end, { desc = "Harpoon: Select file 1" })
+map("n", "<leader>h2", function()
+	harpoon:list():select(2)
+end, { desc = "Harpoon: Select file 2" })
+map("n", "<leader>h3", function()
+	harpoon:list():select(3)
+end, { desc = "Harpoon: Select file 3" })
+map("n", "<leader>h4", function()
+	harpoon:list():select(4)
+end, { desc = "Harpoon: Select file 4" })
+
+-- Toggle previous & next buffers stored within Harpoon list
+map("n", "<leader>hp", function()
+	harpoon:list():prev()
+end, { desc = "Harpoon: Previous file" })
+map("n", "<leader>hn", function()
+	harpoon:list():next()
+end, { desc = "Harpoon: Next file" })
 
 -- Custom Commands
 map("n", "<C-c>", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight" })
