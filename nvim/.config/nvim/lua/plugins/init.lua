@@ -25,6 +25,7 @@ return {
 	require("plugins.motions.which-key"),
 	require("plugins.motions.nvim-surround"),
 	require("plugins.motions.text-objects"),
+	require("plugins.motions.illuminate"),
 
 	-- themes
 	require("plugins.themes.gruvbox"),
@@ -38,8 +39,8 @@ return {
 	require("plugins.git.lazygit"),
 
 	-- ai
-	-- require("plugins.ai.codeium"),
-	require("plugins.ai.gemini"),
+	require("plugins.ai.codeium"),
+	-- require("plugins.ai.gemini"),
 
 	-- file-navigation
 	require("plugins.file_navigation.neo-tree"),
@@ -47,6 +48,7 @@ return {
 	require("plugins.file_navigation.telescope"),
 	require("plugins.file_navigation.zoxide"),
 	require("plugins.file_navigation.persistence"),
+	require("plugins.file_navigation.harpoon"),
 
 	-- looks
 	require("plugins.looks.barbar"),
