@@ -12,6 +12,7 @@ return {
 	require("plugins.productivity.comment"),
 	require("plugins.productivity.lazydev"),
 	require("plugins.productivity.toggleterm"),
+	require("plugins.productivity.jupynium"),
 	require("plugins.productivity.trouble"),
 	require("plugins.productivity.vim-tmux"),
 	require("plugins.productivity.render-markdown"),
@@ -30,6 +31,7 @@ return {
 	-- themes
 	require("plugins.themes.gruvbox"),
 	require("plugins.themes.catppuccin"),
+	require("plugins.themes.rosepine"),
 
 	-- cp
 	require("plugins.cp.leetcode"),
@@ -39,8 +41,8 @@ return {
 	require("plugins.git.lazygit"),
 
 	-- ai
-	require("plugins.ai.codeium"),
-	-- require("plugins.ai.gemini"),
+	-- require("plugins.ai.codeium"),
+	require("plugins.ai.gemini"),
 
 	-- file-navigation
 	require("plugins.file_navigation.neo-tree"),
