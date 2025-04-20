@@ -42,7 +42,7 @@ return {
 
 	-- ai
 	-- require("plugins.ai.codeium"),
-	require("plugins.ai.gemini"),
+	-- require("plugins.ai.gemini"),
 
 	-- file-navigation
 	require("plugins.file_navigation.neo-tree"),
@@ -62,6 +62,7 @@ return {
 	require("plugins.looks.noice"),
 	require("plugins.looks.barbeque"),
 	require("plugins.looks.scrollbar"),
+	require("plugins.looks.smear_cursor"),
 
 	-- fun
 	require("plugins.fun.cellular"),
