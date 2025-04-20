@@ -57,3 +57,17 @@ vim.api.nvim_create_autocmd("WinLeave", {
 	pattern = "*",
 	command = "setlocal nocursorline nocursorcolumn",
 })
+
+-- to use the "+y to copy the contents to the system clipboard in windows from wsl
+vim.g.clipboard = {
+    name = 'WslClipboard',
+    copy = {
+        ['+'] = 'wsl.exe clip.exe',
+        ['*'] = 'wsl.exe clip.exe',
+    },
+    paste = {
+        ['+'] = 'powershell.exe Get-Clipboard',
+        ['*'] = 'powershell.exe Get-Clipboard',
+    },
+}
+
